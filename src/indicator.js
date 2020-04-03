@@ -98,8 +98,8 @@ var CPUFreqIndicator = class CPUFreqIndicator extends baseindicator.CPUFreqBaseI
         this.powerActions(this._power_state);
 
         super.enable();
-        this.timeout = Mainloop.timeout_add_seconds(1, () => this._updateFreq());
-        this.timeout_mm = Mainloop.timeout_add_seconds(1, () => this._updateFreqMm(false));
+        this.timeout = Mainloop.timeout_add_seconds(2, () => this._updateFreq());
+        this.timeout_mm = Mainloop.timeout_add_seconds(2, () => this._updateFreqMm(false));
     }
 
     _onPowerChanged() {
